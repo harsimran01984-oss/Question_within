@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080711">
+
+    <title>FAKIR — A Journey of Questions</title>
+
+    <meta name="description" content="A quiet corner of the universe for questions about life, existence, love, consciousness, and everything in between.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="starfield" id="starfield"></div>
+    <div class="ambient-glow glow-one"></div>
+    <div class="ambient-glow glow-two"></div>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+        <a href="#" class="brand" id="brand">
+            <span class="brand-symbol">✧</span>
+            <span>FAKIR</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <button class="nav-link active" data-page="home">Home</button>
+            <button class="nav-link" data-page="explore">Explore</button>
+            <button class="nav-link" data-page="about">About</button>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+
+    <main>
+
+        <!-- HOME PAGE -->
+
+        <section class="page active" id="homePage">
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        A COLLECTION OF QUESTIONS
+                        <span class="eyebrow-line"></span>
+                    </div>
+
+                    <h1>
+                        A Journey<br>
+                        <span class="gradient-text">of Questions.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Some questions are destinations.<br>
+                        Others are journeys that never truly end.
+                    </p>
+
+                    <button class="primary-button" id="enterButton">
+                        <span>Enter the Unknown</span>
+                        <span class="button-arrow">↗</span>
+                    </button>
+
+                    <div class="hero-bottom-note">
+                        <span class="pulse-dot"></span>
+                        A place for the endlessly curious
+                    </div>
+
+                </div>
+
+                <div class="hero-orbit orbit-one">
+                    <div class="orbit-point"></div>
+                </div>
+
+                <div class="hero-orbit orbit-two">
+                    <div class="orbit-point"></div>
+                </div>
+
+                <div class="hero-center-star">✦</div>
+
+            </div>
+
+            <div class="home-thought">
+                <span class="thought-label">A MOMENT OF THOUGHT</span>
+                <p id="randomThought">
+                    Perhaps the purpose of life is not to find an answer,
+                    but to become someone who can live with the questions.
+                </p>
+                <button id="newThoughtButton" class="text-button">
+                    Another thought ↗
+                </button>
+            </div>
+
+            <div class="home-invitation">
+                <span class="section-kicker">BEYOND THE OBVIOUS</span>
+                <h2>Curiosity begins<br>where certainty ends.</h2>
+                <p>
+                    Six paths. Twenty-five questions. No promise of final answers.
+                    Just a little space to think.
+                </p>
+                <button class="outline-button" id="homeExploreButton">
+                    Explore the Questions
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- EXPLORE PAGE -->
+
+        <section class="page" id="explorePage">
+
+            <div class="page-heading">
+                <span class="section-kicker">THE COLLECTION</span>
+                <h1>Choose a <span class="gradient-text">path.</span></h1>
+                <p>
+                    Every question opens a different door.
+                    You decide which one to enter.
+                </p>
+            </div>
+
+            <div class="category-grid" id="categoryGrid"></div>
+
+            <div class="explore-quote">
+                "The important thing is not to stop questioning."
+                <span>— A thought worth keeping</span>
+            </div>
+
+        </section>
+
+
+        <!-- QUESTIONS PAGE -->
+
+        <section class="page" id="questionsPage">
+
+            <button class="back-button" id="backToCategories">
+                <span>←</span> All paths
+            </button>
+
+            <div class="page-heading questions-heading">
+                <span class="section-kicker" id="categoryEyebrow">A PATH OF THOUGHT</span>
+                <h1 id="categoryTitle">Questions</h1>
+                <p id="categoryDescription"></p>
+            </div>
+
+            <div class="question-list" id="questionList"></div>
+
+        </section>
+
+
+        <!-- READING PAGE -->
+
+        <section class="page" id="readingPage">
+
+            <div class="reading-topbar">
+                <button class="back-button" id="backToQuestions">
+                    <span>←</span> Back to questions
+                </button>
+
+                <span class="reading-counter" id="readingCounter"></span>
+            </div>
+
+            <article class="article-container">
+
+                <div class="article-header">
+                    <span class="section-kicker" id="articleCategory"></span>
+
+                    <h1 id="articleTitle"></h1>
+
+                    <p class="article-subtitle" id="articleSubtitle"></p>
+
+                    <div class="article-divider">
+                        <span>✧</span>
+                    </div>
+                </div>
+
+                <div class="article-body" id="articleBody"></div>
+
+                <div class="article-ending">
+                    <span class="ending-symbol">✦</span>
+                    <p id="articleEnding"></p>
+                    <span class="ending-signature">— FAKIR</span>
+                </div>
+
+                <div class="article-navigation">
+                    <button class="outline-button" id="previousQuestion">
+                        ← Previous
+                    </button>
+
+                    <button class="primary-button" id="nextQuestion">
+                        Next Question <span class="button-arrow">→</span>
+                    </button>
+                </div>
+
+                <button class="return-home-button" id="readingHomeButton">
+                    Return to the beginning
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <!-- ABOUT PAGE -->
+
+        <section class="page" id="aboutPage">
+
+            <div class="about-container">
+
+                <span class="section-kicker">BEHIND THE QUESTIONS</span>
+
+                <h1>A little about<br><span class="gradient-text">this place.</span></h1>
+
+                <div class="about-divider">✧</div>
+
+                <p class="about-lead">
+                    Not every corner of the internet needs to be loud.
+                    Some places can simply exist for thought.
+                </p>
+
+                <div class="about-content">
+
+                    <p>
+                        This website is a small collection of questions about
+                        existence, love, consciousness, faith, freedom, and
+                        human nature.
+                    </p>
+
+                    <p>
+                        It was created out of curiosity — the kind that does
+                        not always look for answers, but enjoys exploring
+                        what lies beneath them.
+                    </p>
+
+                    <p>
+                        The thoughts and writings here are interpretations,
+                        reflections, arguments, and explorations. They are
+                        not presented as absolute truths. You are free to
+                        agree, disagree, question, or leave with a question
+                        of your own.
+                    </p>
+
+                    <p>
+                        There is no particular destination here.
+                        Take your time. Wander through the questions.
+                        Think for yourself.
+                    </p>
+
+                </div>
+
+                <div class="about-signature">
+                    <span>Created by</span>
+                    <h2>Fakir.</h2>
+                    <p>Wujud aarzi, sawaal abadi.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PORTAL TRANSITION -->
+
+    <div class="portal-overlay" id="portalOverlay">
+        <div class="portal-ring portal-ring-one"></div>
+        <div class="portal-ring portal-ring-two"></div>
+        <div class="portal-ring portal-ring-three"></div>
+        <div class="portal-core"></div>
+        <p class="portal-message" id="portalMessage">Entering the unknown...</p>
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+        <div class="footer-symbol">✧</div>
+        <p>Some questions are never meant to end.</p>
+        <span>CREATED BY FAKIR</span>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
